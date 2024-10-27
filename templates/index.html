@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Playlist Data Fetcher</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #1db954, #121212); /* Gradient with Spotify green and dark black */
+            color: white; /* Text color for readability */
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+        .card {
+            background-color: #282828; /* Spotify-like dark card */
+            border: none;
+            width: 600px;  /* Increased width */
+            padding: 30px;  /* Added some padding for a larger feel */
+            border-radius: 10px; /* Rounded corners */
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;  /* Space between the heading and the card */
+            text-align: center;
+            font-weight: 700;
+        }
+        h2 {
+            font-size: 2rem;  /* Adjusted font size for the card title */
+        }
+        .card-text {
+            font-size: 1.2rem;  /* Adjusted font size for the card text */
+        }
+        .form-control {
+            background-color: #121212;
+            color: white;
+            border: 1px solid #1db954; /* Spotify green border */
+        }
+        .form-control::placeholder {
+            color: #aaa;
+        }
+        .btn-primary {
+            background-color: #1db954;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #1ed760;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Spotify Data Extractor</h1>
+    <div class="card text-center shadow">
+        <div class="card-body">
+            <h2 class="card-title">Spotify Playlist Data</h2>
+            <p class="card-text">Enter the Spotify Playlist ID to fetch data.</p>
+            <form action="/playlist" method="POST">
+                <div class="form-group">
+                    <input type="text" name="playlist_id" class="form-control" placeholder="Playlist ID" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Get Playlist Data</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

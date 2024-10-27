@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist Data - Spotify</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        body {
+            background-color: #121212; /* Dark background */
+            color: #fff; /* Light text */
+            font-family: 'Poppins', sans-serif; /* Spotify-like font */
+            padding-top: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 600;
+            color: #1DB954; /* Spotify green */
+        }
+        .table-container {
+            margin: 0 auto;
+            max-width: 90%;
+            max-height: 500px; /* Set a max-height for scroll */
+            background-color: #282828; /* Dark table background */
+            padding: 20px;
+            border-radius: 8px;
+            overflow: auto; /* Enable scroll for table overflow */
+        }
+        table {
+            width: 100%;
+            color: #fff; /* Light table text color */
+        }
+        table th, table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #444; /* Subtle borders */
+        }
+        table th {
+            background-color: #1DB954; /* Spotify green for headers */
+            text-align: left;
+        }
+        table td {
+            color: #e0e0e0; /* Lighten the table data text for better visibility */
+        }
+        table tr:hover {
+            background-color: #333; /* Hover effect for rows */
+        }
+        .btn-secondary {
+            background-color: #1DB954; /* Spotify green button */
+            border-color: #1DB954;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        .btn-secondary:hover {
+            background-color: #14833b; /* Darker green on hover */
+            border-color: #14833b;
+        }
+        .text-center {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="text-center mb-4">Spotify Playlist Data</h1>
+        <div class="table-container">
+            {{ table|safe }}  <!-- Table content rendered dynamically -->
+        </div>
+        <div class="text-center mt-3">
+            <a href="/" class="btn btn-secondary">Go Back</a>
+        </div>
+    </div>
+
+</body>
+</html>
